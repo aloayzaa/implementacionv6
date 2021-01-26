@@ -1,0 +1,111 @@
+version: '3'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  www:
+    image: nginx
+    restart: always
+    expose:
+      - "80"
+    volumes:
+      - /home/devops/implementacionv5/www:/usr/share/nginx/html:ro
+    environment:
+      - VIRTUAL_HOST=anikamero.com,www.anikamero.com
+      - LETSENCRYPT_HOST=anikamero.com,www.anikamero.com
+      - LETSENCRYPT_EMAIL=cvasquez@anikamero.com
+    depends_on:
+      - nginx-proxy
+      - letsencrypt
+
+  www2:
+    image: nginx
+    restart: always
+    expose:
+      - "80"
+    volumes:
+      - /home/devops/implementacionv5/www2:/usr/share/nginx/html:ro
+    environment:
+      - VIRTUAL_HOST=sarasa.com,www.sarasa.com
+      - LETSENCRYPT_HOST=sarasa.com,www.sarasa.com
+      - LETSENCRYPT_EMAIL=cvasquez@sarasa.com
+    depends_on:
+      - nginx-proxy
+      - letsencrypt
+
+  laravel-app:
+    image: nginx
+    restart: always
+    expose:
+      - "80"
+    volumes:
+      - /home/devops/implementacionv5/laravel-app:/usr/share/nginx/html:ro
+    environment:
+      - VIRTUAL_HOST=laravel-app.com,www.laravel-app.com
+      - LETSENCRYPT_HOST=laravel-app.com,www.laravel-app.com
+      - LETSENCRYPT_EMAIL=cvasquez@laravel-app.com
+    depends_on:
+      - nginx-proxy
+      - letsencrypt
+
+  #PHP Service
+  laravel-app-project:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: digitalocean.com/php
+    container_name: laravel-app-project
+    restart: always
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - /home/devops/implementacionv5/laravel-app:/var/www
+      - /home/devops/implementacionv5/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+  
+  #MySQL Service
+  laravel-app-mysql:
+    image: mysql:5.7.22
+    container_name: laravel-app-mysql
+    restart: always
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: sasa
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+      - /home/devops/implementacionv5/laravel-app/mysql/my.cnf:/etc/mysql/my.cnf
+
+volumes: 
+  certs:
+  html:
+  vhostd:
