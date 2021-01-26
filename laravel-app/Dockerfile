@@ -9,10 +9,19 @@ WORKDIR /var/www
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
-    libpng-dev \
-    libjpeg62-turbo-dev \
     libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    autoconf \
+    pkg-config \
+    libssl-dev \
+    libzip-dev \
+    libgmp-dev \
     locales \
+    re2c \
+    libmhash-dev \
+    libmcrypt-dev \
+    file \
     zip \
     jpegoptim optipng pngquant gifsicle \
     vim \
@@ -20,13 +29,33 @@ RUN apt-get update && apt-get install -y \
     git \
     curl
 
+RUN ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/local/include/
+RUN docker-php-ext-install -j$(nproc) iconv \
+    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-configure zip --with-libzip \
+    && docker-php-ext-install zip \
+    && docker-php-ext-install gmp \
+    && docker-php-ext-install gd   
+    
+
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install extensions
-RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl
 RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
 RUN docker-php-ext-install gd
+
+# Instalar locale y los idiomas que necesitemos
+#RUN DEBIAN_FRONTEND=noninteractive apt-get install -y locales locales-all
+#RUN sed -i 's/# es_PE.UTF-5 UTF-5/es_PE.UTF-5 UTF-5/' /etc/locale.gen \
+#    && locale-gen
+
+# Supervisor
+#RUN add-apt-repository universe
+RUN apt-get update -y
+RUN apt-get install supervisor -y && touch /etc/supervisor/conf.d/laravel-worker.conf
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -42,7 +71,7 @@ COPY . /var/www
 COPY --chown=devops:devops . /var/www
 
 # Change current user to devops
-USER www
+USER devops
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
