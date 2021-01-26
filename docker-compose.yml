@@ -79,9 +79,9 @@ services:
   #PHP Service
   laravel-app-project:
     build:
-      context: .
+      context: ./laravel-app/
       dockerfile: Dockerfile
-    image: digitalocean.com/php
+    image: christiandavbid/php:7.3-fpm
     container_name: laravel-app-project
     restart: always
     tty: true
