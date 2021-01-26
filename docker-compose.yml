@@ -102,10 +102,11 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - dbdata:/var/lib/mysql/
+      - bdata:/var/lib/mysql/
       - /home/devops/implementacionv5/laravel-app/mysql/my.cnf:/etc/mysql/my.cnf
 
 volumes: 
   certs:
   html:
   vhostd:
+  bdata:
