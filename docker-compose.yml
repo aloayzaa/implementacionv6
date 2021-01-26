@@ -67,7 +67,7 @@ services:
     expose:
       - "80"
     volumes:
-      - /home/devops/implementacionv6/laravel-app:/usr/share/nginx/html:ro
+      - /home/devops/implementacionv6/laravel-app/public:/usr/share/nginx/html:ro
     environment:
       - VIRTUAL_HOST=laravel-app.com,www.laravel-app.com
       - LETSENCRYPT_HOST=laravel-app.com,www.laravel-app.com
