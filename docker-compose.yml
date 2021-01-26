@@ -32,7 +32,7 @@ services:
     expose:
       - "80"
     volumes:
-      - /home/devops/implementacionv5/www:/usr/share/nginx/html:ro
+      - /home/devops/implementacionv6/www:/usr/share/nginx/html:ro
     environment:
       - VIRTUAL_HOST=anikamero.com,www.anikamero.com
       - LETSENCRYPT_HOST=anikamero.com,www.anikamero.com
@@ -47,7 +47,7 @@ services:
     expose:
       - "80"
     volumes:
-      - /home/devops/implementacionv5/www2:/usr/share/nginx/html:ro
+      - /home/devops/implementacionv6/www2:/usr/share/nginx/html:ro
     environment:
       - VIRTUAL_HOST=sarasa.com,www.sarasa.com
       - LETSENCRYPT_HOST=sarasa.com,www.sarasa.com
@@ -62,7 +62,7 @@ services:
     expose:
       - "80"
     volumes:
-      - /home/devops/implementacionv5/laravel-app:/usr/share/nginx/html:ro
+      - /home/devops/implementacionv6/laravel-app:/usr/share/nginx/html:ro
     environment:
       - VIRTUAL_HOST=laravel-app.com,www.laravel-app.com
       - LETSENCRYPT_HOST=laravel-app.com,www.laravel-app.com
@@ -85,8 +85,8 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www
     volumes:
-      - /home/devops/implementacionv5/laravel-app:/var/www
-      - /home/devops/implementacionv5/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+      - /home/devops/implementacionv6/laravel-app:/var/www
+      - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
   
   #MySQL Service
   laravel-app-mysql:
@@ -103,7 +103,7 @@ services:
       SERVICE_NAME: mysql
     volumes:
       - bdata:/var/lib/mysql/
-      - /home/devops/implementacionv5/laravel-app/mysql/my.cnf:/etc/mysql/my.cnf
+      - /home/devops/implementacionv6/laravel-app/mysql/my.cnf:/etc/mysql/my.cnf
 
 volumes: 
   certs:
