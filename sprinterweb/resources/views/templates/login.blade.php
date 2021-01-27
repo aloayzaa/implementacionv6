@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="{{ asset('img/anikama.ico') }}">
+    <link rel="shortcut icon" href="https://devops.anikamagroup.com/img/anikama.ico">
 
     <title>Sprinter Web - Software de Gestión</title>
 
-    <link rel="stylesheet" href="{{ asset('css/login/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login/custom.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login/skins/blueAnikama.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login/fontello/css/fontello.css') }}">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/bootstrap.css">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/custom.css">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/style.css">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/skins/blueAnikama.css">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/fontello/css/fontello.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/login/plugins/magnific-popup/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login/css/animations.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login/plugins/owl-carousel/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/login/font-min/flaticon.css') }}">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/css/animations.css">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="https://devops.anikamagroup.com/css/login/font-min/flaticon.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 
 
@@ -77,7 +77,7 @@
                 <div class="col-md-4">
                     <div class="header-left clearfix">
                         <div class="logo">
-                            <a href="http://www.anikamagroup.com/" class="# hidden-xs"><img id="logo" src="{{ asset('img/anikamagroup.png') }}" alt="Anikama  Group S.A.C."></a>
+                            <a href="http://www.anikamagroup.com/" class="# hidden-xs"><img id="logo" src="https://devops.anikamagroup.com/img/anikamagroup.png" alt="Anikama  Group S.A.C."></a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                                             <!-- logo moviles -->
                                             <div class="logo">
                                                 <a href="http://www.anikamagroup.com/" class="# hidden-lg hidden-md hidden-sm">
-                                                    <img id="logo" src="{{ asset('img/anikamagroup.png') }}" style="margin-top: 0.5em;" alt="Anikama Group S.A.C."></a>
+                                                    <img id="logo" src="https://devops.anikamagroup.com/img/anikamagroup.png" style="margin-top: 0.5em;" alt="Anikama Group S.A.C."></a>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
