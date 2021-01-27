@@ -213,20 +213,20 @@
     </footer>
 </div>
 </body>
-<script src="{{ asset('css/login/jquery.js') }}"></script>
-<script src="{{ asset('css/login/bootstrap.js') }}"></script>
-<script src="{{ asset('css/login/plugins/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
-<script src="{{ asset('css/login/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
-<script src="{{ asset('css/login/plugins/modernizr.js') }}"></script>
-<script src="{{ asset('css/login/plugins/isotope/isotope.pkgd.min.js') }}"></script>
-<script src="{{ asset('css/login/plugins/owl-carousel/owl.carousel.js') }}"></script>
-<script src="{{ asset('css/login/plugins/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('css/login/plugins/jquery.appear.js') }}"></script>
-<script src="{{ asset('css/login/plugins/jquery.countTo.js') }}"></script>
-<script src="{{ asset('css/login/plugins/jquery.parallax-1.1.3.js') }}"></script>
-<script src="{{ asset('css/login/plugins/jquery.validate.js') }}"></script>
-<script src="{{ asset('css/login/js/template.js') }}"></script>
-<script src="{{ asset('css/login/js/custom.js') }}"></script>
+<script src="https://devops.anikamagroup.com/css/login/jquery.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/bootstrap.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/modernizr.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/isotope/isotope.pkgd.min.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/owl-carousel/owl.carousel.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/jquery.appear.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/jquery.countTo.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/jquery.parallax-1.1.3.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/plugins/jquery.validate.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/js/template.js"></script>
+<script src="https://devops.anikamagroup.com/css/login/js/custom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 @yield('scripts')
