@@ -111,6 +111,8 @@ services:
     volumes:
       - /home/devops/implementacionv6/laravel-app:/var/www
       - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    links:
+      - mysql
     depends_on:
       - mysql
     networks:
