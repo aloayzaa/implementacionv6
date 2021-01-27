@@ -1,0 +1,380 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 130023424 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2830), pid=31473, tid=31475
+#
+# JRE version:  (11.0.5+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.5+10-b520.30, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P" (or dumping to /var/www/html/PROYECTOSANIKAMA/sprinterweb/core.31473)
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: org.jetbrains.git4idea.http.GitAskPassApp Password for 'https://anikamagroup@bitbucket.org': 
+
+Host: Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz, 8 cores, 7G, Ubuntu 18.04.3 LTS
+Time: Fri Feb  7 17:02:33 2020 -05 elapsed time: 41 seconds (0d 0h 0m 41s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f402c014800):  JavaThread "Unknown thread" [_thread_in_vm, id=31475, stack(0x00007f4034baa000,0x00007f4034cab000)]
+
+Stack: [0x00007f4034baa000,0x00007f4034cab000],  sp=0x00007f4034ca9230,  free space=1020k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xd9edfa]  VMError::report_and_die(int, char const*, char const*, __va_list_tag*, Thread*, unsigned char*, void*, void*, char const*, int, unsigned long)+0x18a
+V  [libjvm.so+0xd9fc93]  VMError::report_and_die(Thread*, char const*, int, unsigned long, VMErrorType, char const*, __va_list_tag*)+0x43
+V  [libjvm.so+0x697ae8]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*, ...)+0xe8
+V  [libjvm.so+0xba5539]  os::pd_commit_memory_or_exit(char*, unsigned long, unsigned long, bool, char const*)+0xe9
+V  [libjvm.so+0xb9d46d]  os::commit_memory_or_exit(char*, unsigned long, unsigned long, bool, char const*)+0x1d
+V  [libjvm.so+0x79f2a1]  G1PageBasedVirtualSpace::commit_preferred_pages(unsigned long, unsigned long)+0x71
+V  [libjvm.so+0x79f3f5]  G1PageBasedVirtualSpace::commit_internal(unsigned long, unsigned long)+0x85
+V  [libjvm.so+0x79f5ea]  G1PageBasedVirtualSpace::commit(unsigned long, unsigned long)+0x10a
+V  [libjvm.so+0x7a6e86]  G1RegionsLargerThanCommitSizeMapper::commit_regions(unsigned int, unsigned long, WorkGang*)+0x46
+V  [libjvm.so+0x80fe08]  HeapRegionManager::commit_regions(unsigned int, unsigned long, WorkGang*)+0x88
+V  [libjvm.so+0x810964]  HeapRegionManager::make_regions_available(unsigned int, unsigned int, WorkGang*)+0x34
+V  [libjvm.so+0x810e69]  HeapRegionManager::expand_by(unsigned int, WorkGang*)+0x79
+V  [libjvm.so+0x762c60]  G1CollectedHeap::expand(unsigned long, WorkGang*, double*)+0xc0
+V  [libjvm.so+0x763355]  G1CollectedHeap::initialize()+0x695
+V  [libjvm.so+0xd62501]  Universe::initialize_heap()+0x41
+V  [libjvm.so+0xd627b1]  universe_init()+0x41
+V  [libjvm.so+0x82dadf]  init_globals()+0x5f
+V  [libjvm.so+0xd394d4]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x314
+V  [libjvm.so+0x8d5006]  JNI_CreateJavaVM+0x56
+C  [libjli.so+0x4814]  JavaMain+0x84
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000000001b44440, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00007f402c02d800 GCTaskThread "GC Thread#0" [stack: 0x00007f4030ba5000,0x00007f4030ca5000] [id=31481]
+  0x00007f402c05e800 ConcurrentGCThread "G1 Main Marker" [stack: 0x00007f403029b000,0x00007f403039b000] [id=31482]
+  0x00007f402c060800 ConcurrentGCThread "G1 Conc#0" [stack: 0x00007f4030199000,0x00007f4030299000] [id=31483]
+
+[error occurred during error reporting (printing all threads), id 0xb, SIGSEGV (0xb) at pc=0x00007f40331cafd5]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f402c011070] Heap_lock - owner thread: 0x00007f402c014800
+
+Heap address: 0x0000000084e00000, size: 1970 MB, Compressed Oops mode: Non-zero based: 0x0000000084e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 19.069 Protecting memory [0x00007f4034baa000,0x00007f4034bae000] with protection modes 0
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 07:14 24                                 /snap/phpstorm/139/jbr/bin/java
+00601000-00602000 r--p 00001000 07:14 24                                 /snap/phpstorm/139/jbr/bin/java
+00602000-00603000 rw-p 00002000 07:14 24                                 /snap/phpstorm/139/jbr/bin/java
+01b2c000-01b4d000 rw-p 00000000 00:00 0                                  [heap]
+8ca00000-100000000 ---p 00000000 00:00 0 
+7f4004000000-7f4004021000 rw-p 00000000 00:00 0 
+7f4004021000-7f4008000000 ---p 00000000 00:00 0 
+7f4009a77000-7f400c000000 rw-p 00000000 00:00 0 
+7f400c000000-7f400c021000 rw-p 00000000 00:00 0 
+7f400c021000-7f4010000000 ---p 00000000 00:00 0 
+7f401006e000-7f4010270000 rw-p 00000000 00:00 0 
+7f4010270000-7f4014000000 ---p 00000000 00:00 0 
+7f4014000000-7f4014021000 rw-p 00000000 00:00 0 
+7f4014021000-7f4018000000 ---p 00000000 00:00 0 
+7f40180b8000-7f40183bb000 rw-p 00000000 00:00 0 
+7f40183bb000-7f4018f46000 ---p 00000000 00:00 0 
+7f4018f46000-7f40191b6000 rwxp 00000000 00:00 0 
+7f40191b6000-7f40194d7000 ---p 00000000 00:00 0 
+7f40194d7000-7f4019747000 rwxp 00000000 00:00 0 
+7f4019747000-7f4020a0e000 ---p 00000000 00:00 0 
+7f4020a0e000-7f4020c7e000 rwxp 00000000 00:00 0 
+7f4020c7e000-7f4027f46000 ---p 00000000 00:00 0 
+7f4027f46000-7f402c000000 r--s 00000000 07:14 461                        /snap/phpstorm/139/jbr/lib/modules
+7f402c000000-7f402c08d000 rw-p 00000000 00:00 0 
+7f402c08d000-7f4030000000 ---p 00000000 00:00 0 
+7f4030096000-7f4030197000 rw-p 00000000 00:00 0 
+7f4030197000-7f4030198000 ---p 00000000 00:00 0 
+7f4030198000-7f4030299000 rw-p 00000000 00:00 0 
+7f4030299000-7f403029a000 ---p 00000000 00:00 0 
+7f403029a000-7f4030ba3000 rw-p 00000000 00:00 0 
+7f4030ba3000-7f4030ba4000 ---p 00000000 00:00 0 
+7f4030ba4000-7f4030caa000 rw-p 00000000 00:00 0 
+7f4030caa000-7f4030d90000 ---p 00000000 00:00 0 
+7f4030d90000-7f4030d95000 rw-p 00000000 00:00 0 
+7f4030d95000-7f4030e7b000 ---p 00000000 00:00 0 
+7f4030e7b000-7f4030e80000 r-xp 00000000 07:14 439                        /snap/phpstorm/139/jbr/lib/libjimage.so
+7f4030e80000-7f4031080000 ---p 00005000 07:14 439                        /snap/phpstorm/139/jbr/lib/libjimage.so
+7f4031080000-7f4031081000 r--p 00005000 07:14 439                        /snap/phpstorm/139/jbr/lib/libjimage.so
+7f4031081000-7f4031082000 rw-p 00006000 07:14 439                        /snap/phpstorm/139/jbr/lib/libjimage.so
+7f4031082000-7f4031089000 r-xp 00000000 07:14 460                        /snap/phpstorm/139/jbr/lib/libzip.so
+7f4031089000-7f4031288000 ---p 00007000 07:14 460                        /snap/phpstorm/139/jbr/lib/libzip.so
+7f4031288000-7f4031289000 r--p 00006000 07:14 460                        /snap/phpstorm/139/jbr/lib/libzip.so
+7f4031289000-7f403128a000 rw-p 00007000 07:14 460                        /snap/phpstorm/139/jbr/lib/libzip.so
+7f403128a000-7f4031295000 r-xp 00000000 fd:00 58462932                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f4031295000-7f4031494000 ---p 0000b000 fd:00 58462932                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f4031494000-7f4031495000 r--p 0000a000 fd:00 58462932                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f4031495000-7f4031496000 rw-p 0000b000 fd:00 58462932                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f4031496000-7f403149c000 rw-p 00000000 00:00 0 
+7f403149c000-7f40314b3000 r-xp 00000000 fd:00 58462926                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f40314b3000-7f40316b2000 ---p 00017000 fd:00 58462926                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f40316b2000-7f40316b3000 r--p 00016000 fd:00 58462926                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f40316b3000-7f40316b4000 rw-p 00017000 fd:00 58462926                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f40316b4000-7f40316b6000 rw-p 00000000 00:00 0 
+7f40316b6000-7f40316c1000 r-xp 00000000 fd:00 58462943                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f40316c1000-7f40318c0000 ---p 0000b000 fd:00 58462943                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f40318c0000-7f40318c1000 r--p 0000a000 fd:00 58462943                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f40318c1000-7f40318c2000 rw-p 0000b000 fd:00 58462943                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f40318c2000-7f40318ca000 r-xp 00000000 fd:00 58462928                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f40318ca000-7f4031aca000 ---p 00008000 fd:00 58462928                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f4031aca000-7f4031acb000 r--p 00008000 fd:00 58462928                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f4031acb000-7f4031acc000 rw-p 00009000 fd:00 58462928                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f4031acc000-7f4031af5000 r-xp 00000000 07:14 429                        /snap/phpstorm/139/jbr/lib/libjava.so
+7f4031af5000-7f4031cf4000 ---p 00029000 07:14 429                        /snap/phpstorm/139/jbr/lib/libjava.so
+7f4031cf4000-7f4031cf5000 r--p 00028000 07:14 429                        /snap/phpstorm/139/jbr/lib/libjava.so
+7f4031cf5000-7f4031cf7000 rw-p 00029000 07:14 429                        /snap/phpstorm/139/jbr/lib/libjava.so
+7f4031cf7000-7f4031d04000 r-xp 00000000 07:14 459                        /snap/phpstorm/139/jbr/lib/libverify.so
+7f4031d04000-7f4031f03000 ---p 0000d000 07:14 459                        /snap/phpstorm/139/jbr/lib/libverify.so
+7f4031f03000-7f4031f05000 r--p 0000c000 07:14 459                        /snap/phpstorm/139/jbr/lib/libverify.so
+7f4031f05000-7f4031f06000 rw-p 0000e000 07:14 459                        /snap/phpstorm/139/jbr/lib/libverify.so
+7f4031f06000-7f4031f0d000 r-xp 00000000 fd:00 58462983                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f4031f0d000-7f403210c000 ---p 00007000 fd:00 58462983                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f403210c000-7f403210d000 r--p 00006000 fd:00 58462983                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f403210d000-7f403210e000 rw-p 00007000 fd:00 58462983                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f403210e000-7f4032125000 r-xp 00000000 fd:00 58459220                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f4032125000-7f4032324000 ---p 00017000 fd:00 58459220                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f4032324000-7f4032325000 r--p 00016000 fd:00 58459220                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f4032325000-7f4032326000 rw-p 00017000 fd:00 58459220                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f4032326000-7f40324c3000 r-xp 00000000 fd:00 58462905                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f40324c3000-7f40326c2000 ---p 0019d000 fd:00 58462905                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f40326c2000-7f40326c3000 r--p 0019c000 fd:00 58462905                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f40326c3000-7f40326c4000 rw-p 0019d000 fd:00 58462905                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f40326c4000-7f403283d000 r-xp 00000000 fd:00 15073362                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f403283d000-7f4032a3d000 ---p 00179000 fd:00 15073362                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f4032a3d000-7f4032a47000 r--p 00179000 fd:00 15073362                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f4032a47000-7f4032a49000 rw-p 00183000 fd:00 15073362                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f4032a49000-7f4032a4d000 rw-p 00000000 00:00 0 
+7f4032a4d000-7f4033afe000 r-xp 00000000 07:14 472                        /snap/phpstorm/139/jbr/lib/server/libjvm.so
+7f4033afe000-7f4033cfe000 ---p 010b1000 07:14 472                        /snap/phpstorm/139/jbr/lib/server/libjvm.so
+7f4033cfe000-7f4033dcc000 r--p 010b1000 07:14 472                        /snap/phpstorm/139/jbr/lib/server/libjvm.so
+7f4033dcc000-7f4033e06000 rw-p 0117f000 07:14 472                        /snap/phpstorm/139/jbr/lib/server/libjvm.so
+7f4033e06000-7f4033e5f000 rw-p 00000000 00:00 0 
+7f4033e5f000-7f4034046000 r-xp 00000000 fd:00 58462842                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f4034046000-7f4034246000 ---p 001e7000 fd:00 58462842                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f4034246000-7f403424a000 r--p 001e7000 fd:00 58462842                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f403424a000-7f403424c000 rw-p 001eb000 fd:00 58462842                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f403424c000-7f4034250000 rw-p 00000000 00:00 0 
+7f4034250000-7f4034253000 r-xp 00000000 fd:00 58462865                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f4034253000-7f4034452000 ---p 00003000 fd:00 58462865                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f4034452000-7f4034453000 r--p 00002000 fd:00 58462865                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f4034453000-7f4034454000 rw-p 00003000 fd:00 58462865                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f4034454000-7f4034463000 r-xp 00000000 07:14 406                        /snap/phpstorm/139/jbr/lib/jli/libjli.so
+7f4034463000-7f4034662000 ---p 0000f000 07:14 406                        /snap/phpstorm/139/jbr/lib/jli/libjli.so
+7f4034662000-7f4034663000 r--p 0000e000 07:14 406                        /snap/phpstorm/139/jbr/lib/jli/libjli.so
+7f4034663000-7f4034664000 rw-p 0000f000 07:14 406                        /snap/phpstorm/139/jbr/lib/jli/libjli.so
+7f4034664000-7f403467e000 r-xp 00000000 fd:00 58462975                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f403467e000-7f403487d000 ---p 0001a000 fd:00 58462975                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f403487d000-7f403487e000 r--p 00019000 fd:00 58462975                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f403487e000-7f403487f000 rw-p 0001a000 fd:00 58462975                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f403487f000-7f4034883000 rw-p 00000000 00:00 0 
+7f4034883000-7f403489f000 r-xp 00000000 fd:00 58463014                   /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f403489f000-7f4034a9e000 ---p 0001c000 fd:00 58463014                   /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f4034a9e000-7f4034a9f000 r--p 0001b000 fd:00 58463014                   /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f4034a9f000-7f4034aa0000 rw-p 0001c000 fd:00 58463014                   /lib/x86_64-linux-gnu/libz.so.1.2.11
+7f4034aa0000-7f4034ac7000 r-xp 00000000 fd:00 58462814                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f4034b2a000-7f4034baa000 rw-p 00000000 00:00 0 
+7f4034baa000-7f4034bae000 ---p 00000000 00:00 0 
+7f4034bae000-7f4034caf000 rw-p 00000000 00:00 0 
+7f4034cb1000-7f4034cb6000 rw-p 00000000 00:00 0 
+7f4034cb6000-7f4034cbd000 ---p 00000000 00:00 0 
+7f4034cbd000-7f4034cc5000 rw-s 00000000 fd:00 6554800                    /tmp/hsperfdata_arthur/31473
+7f4034cc5000-7f4034cc6000 ---p 00000000 00:00 0 
+7f4034cc6000-7f4034cc7000 r--p 00000000 00:00 0 
+7f4034cc7000-7f4034cc8000 r--p 00027000 fd:00 58462814                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f4034cc8000-7f4034cc9000 rw-p 00028000 fd:00 58462814                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f4034cc9000-7f4034cca000 rw-p 00000000 00:00 0 
+7ffc8ce3c000-7ffc8ce5d000 rw-p 00000000 00:00 0                          [stack]
+7ffc8ce9e000-7ffc8cea1000 r--p 00000000 00:00 0                          [vvar]
+7ffc8cea1000-7ffc8cea3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+VM Arguments:
+java_command: org.jetbrains.git4idea.http.GitAskPassApp Password for 'https://anikamagroup@bitbucket.org': 
+java_class_path (initial): /snap/phpstorm/139/plugins/git4idea/lib/git4idea-rt.jar:/snap/phpstorm/139/lib/xmlrpc-2.0.1.jar:/snap/phpstorm/139/lib/commons-codec-1.13.jar:/snap/phpstorm/139/lib/util.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 130023424                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2065694720                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=/usr/lib/git-core:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+USERNAME=arthur
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xd9fcf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xd9fcf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0xd9fcf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0xba10a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0xba10a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0xd9fcf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR2: [libjvm.so+0xba0f40], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.3 LTS"
+uname:Linux 4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 30538, NOFILE 1048576, AS infinity, DATA infinity, FSIZE infinity
+load average:12.37 8.06 4.68
+
+/proc/meminfo:
+MemTotal:        8065364 kB
+MemFree:          127000 kB
+MemAvailable:      52076 kB
+Buffers:            3460 kB
+Cached:           987084 kB
+SwapCached:         4020 kB
+Active:          6470864 kB
+Inactive:        1130136 kB
+Active(anon):    6451908 kB
+Inactive(anon):  1096264 kB
+Active(file):      18956 kB
+Inactive(file):    33872 kB
+Unevictable:         120 kB
+Mlocked:             120 kB
+SwapTotal:        999420 kB
+SwapFree:              0 kB
+Dirty:               376 kB
+Writeback:            76 kB
+AnonPages:       6607116 kB
+Mapped:           735464 kB
+Shmem:            937480 kB
+Slab:             148752 kB
+SReclaimable:      66868 kB
+SUnreclaim:        81884 kB
+KernelStack:       18288 kB
+PageTables:        94848 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     5032100 kB
+Committed_AS:   16446784 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     18432 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      432740 kB
+DirectMap2M:     7854080 kB
+DirectMap1G:     1048576 kB
+
+
+/proc/sys/kernel/threads-max (system-wide limit on the number of threads):
+61076
+
+
+/proc/sys/vm/max_map_count (maximum number of memory map areas a process may have):
+65530
+
+
+/proc/sys/kernel/pid_max (system-wide limit on number of process identifiers):
+32768
+
+
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-7
+cpu_memory_nodes: 0
+active_processor_count: 8
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 7782801408
+memory_max_usage_in_bytes: 239632384
+
+Steal ticks since vm start: 0
+Steal ticks percentage since vm start:  0.000
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, fma
+CPU Model and flags from /proc/cpuinfo:
+model name	: Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+
+Memory: 4k page, physical 8065364k(125384k free), swap 999420k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.5+10-b520.30) for linux-amd64 JRE (11.0.5+10-b520.30), built on Dec 24 2019 09:22:05 by "" with gcc 4.8.5 20150623 (Red Hat 4.8.5-36)
+
+END.

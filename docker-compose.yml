@@ -1,6 +1,9 @@
 version: '3'
 
 services:
+###############################################################################
+# NGINX PROXY
+################################################################################
   nginx-proxy:
     image: jwilder/nginx-proxy
     restart: always
@@ -15,7 +18,9 @@ services:
       - html:/usr/share/nginx/html
     labels:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
-
+###############################################################################
+# LETSENCRYPT
+################################################################################
   letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
     restart: always
@@ -27,7 +32,9 @@ services:
       - vhostd:/etc/nginx/vhost.d
       - html:/usr/share/nginx/html
       - /var/run/docker.sock:/var/run/docker.sock:ro
-
+###############################################################################
+# APP HTML -  TEST
+################################################################################
   www:
     image: nginx
     restart: always
@@ -59,7 +66,9 @@ services:
     depends_on:
       - nginx-proxy
       - letsencrypt
-
+###############################################################################
+# LARAVEL APP INICIAL - TEST
+################################################################################
   laravel-app:
     image: nginx
     restart: always
@@ -77,7 +86,6 @@ services:
       - nginx-proxy
       - letsencrypt
 
-  #PHP Service
   laravel-app-project:
     build:
       context: ./laravel-app/
@@ -93,8 +101,48 @@ services:
     volumes:
       - /home/devops/implementacionv6/laravel-app:/var/www
       - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
-  
-  #MySQL Service
+
+###############################################################################
+# SPRINTER WEB
+################################################################################
+  sprinterweb:
+    image: nginx
+    restart: always
+    container_name: sprinterweb
+    expose:
+      - "80"
+    volumes:
+      - /home/devops/implementacionv6/sprinterweb:/var/www
+      - /home/devops/implementacionv6/nginx/sprinterweb/conf.d/:/etc/nginx/conf.d/
+    environment:
+      - VIRTUAL_HOST=sprintererp.com,www.sprintererp.com
+      - LETSENCRYPT_HOST=sprintererp.com,www.sprintererp.com
+      - LETSENCRYPT_EMAIL=christiandavbid@gmail.com
+    depends_on:
+      - nginx-proxy
+      - letsencrypt
+
+  sprinterweb-project:
+    build:
+      context: ./sprinterweb/
+      dockerfile: Dockerfile
+    image: christiandavbid/php:7.3-fpm
+    container_name: sprinterweb-project
+    restart: always
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - /home/devops/implementacionv6/sprinterweb:/var/www
+      - /home/devops/implementacionv6/sprinterweb/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    depends_on:
+      - sprinterweb
+      - mysql06
+   
+###############################################################################
+# MY SQL SERVICE
+################################################################################
   laravel-app-mysql:
     image: mysql:5.7.22
     container_name: laravel-app-mysql

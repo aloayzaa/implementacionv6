@@ -1,0 +1,533 @@
+[33mcommit f7f55a53a2d7c13efe2738776a53c048b0c0ddaf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: d485d750 a4e60d75
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Tue Mar 17 10:46:58 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit d485d750fc569668ccd60234a54e2974f240bd44[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Tue Mar 17 10:46:23 2020 -0500
+
+    facturacion 0.1 antes de clonar
+
+[33mcommit a4e60d7541e3f6335c75d33aa3c2df6a8d09bcf1[m
+Merge: 20a68605 4694d2cf
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Tue Mar 17 10:46:20 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 20a68605aac7418b5334f66ec15e7de6d1dfc576[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Tue Mar 17 10:46:03 2020 -0500
+
+    subir cambios punto de venta
+
+[33mcommit 4694d2cf51cc7d0e74c277c6d46eb78121269f16[m
+Merge: 138825a9 443380e0
+Author: andre <aloayza@anikamagroup.com>
+Date:   Mon Mar 16 19:40:57 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 138825a926523136f179987aeefa368450311c8a[m
+Author: andre <aloayza@anikamagroup.com>
+Date:   Mon Mar 16 19:40:35 2020 -0500
+
+    avance de listas de precios , backups 160320
+
+[33mcommit 443380e05f8301d2787312e12b51b70260f848f8[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Mon Mar 16 19:16:46 2020 -0500
+
+    asegurar mis cambios que se subieron xD
+
+[33mcommit acb64836ef1dbeaf6ff4d160d385939905d7826a[m
+Merge: e1420d1c aafca644
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Mon Mar 16 19:14:48 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit e1420d1c291b7e2f4b2ba97ddda6510b10839757[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Mon Mar 16 19:14:12 2020 -0500
+
+    subir cambios de punto de venta transaccion
+
+[33mcommit aafca644c70df87d4e69799cd2c83c1ded4edf00[m
+Merge: 34195df2 0b5ca6ef
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Mon Mar 16 17:56:09 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 34195df21fb0ce12c0baaaeaa0d42108d6b9b0a6[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Mon Mar 16 17:55:49 2020 -0500
+
+    Factuacion pedido al 30%, listando por puntoventa
+
+[33mcommit ce678ef3eb4b5dc4e9467e2ff108a697b2a7fe15[m
+Merge: 86b35232 0b5ca6ef
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Thu Mar 12 09:23:45 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+    
+     Conflicts:
+    	public/anikama/js2/sales.js
+
+[33mcommit 86b35232e50755fef03d02454ed2edefccf1e5ca[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Thu Mar 12 09:19:31 2020 -0500
+
+    bajas cambios .....
+
+[33mcommit 0b5ca6efe42a232f9a13d4aca5f336b0cabe21a9[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Thu Mar 12 09:18:15 2020 -0500
+
+    facturacion 0.01
+
+[33mcommit ab036ac240c6bf9814983cdc5427a4ee313c41d8[m
+Merge: e572f773 6a67e70d
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Wed Mar 11 18:23:43 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit e572f77342657998162b6fea3270994228e4424e[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Wed Mar 11 18:23:29 2020 -0500
+
+    facturacion 0.01
+
+[33mcommit 6a67e70d3d2c9b14b212be193690995d606c8049[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 11 18:22:40 2020 -0500
+
+    subir sales.js .....
+
+[33mcommit 0c052163579a710d4d44de9863c117eb6f3fb94e[m
+Merge: d4194f43 4ef2e428
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Wed Mar 11 16:01:24 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+    
+     Conflicts:
+    	public/anikama/js2/sales.js
+
+[33mcommit d4194f43df4dae5a138940771f5c315ad29da192[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Wed Mar 11 15:58:31 2020 -0500
+
+    facturacion 0.01
+
+[33mcommit 4ef2e4284dd8a40f5578d95ce56a6dff866d37d9[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 11 15:57:33 2020 -0500
+
+    subir
+
+[33mcommit 9a8234ec53dbdc97c824495f7b971a7961550c5f[m
+Merge: 117b6dc8 8dd1cc36
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Wed Mar 11 15:55:51 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 117b6dc8f46c4e9ad8216f73f98d1400036834db[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Wed Mar 11 15:55:43 2020 -0500
+
+    antes de totalizar en fact pedido
+
+[33mcommit 8dd1cc36e66be35dc4cc866fd615fb538b706bdb[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 11 15:37:18 2020 -0500
+
+    Cambios sales.js
+
+[33mcommit eb8b1cb405ce97a3a22f7c4d35fe2c75881f4e5c[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 11 12:44:56 2020 -0500
+
+    Subir sales.js ..
+
+[33mcommit dbf80b7290beca1d317e4611486330066bc5ab34[m
+Merge: 5166c6e8 185211f6
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 11 12:33:34 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 5166c6e89ee6c22830bed2ab70d76b5582376818[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 11 12:31:12 2020 -0500
+
+    Bajar cambios...
+
+[33mcommit 185211f62ef81fe795ec165b4bd3cb387ab09aa7[m
+Merge: 935d7a05 b7676a38
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Wed Mar 11 12:25:34 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+    
+     Conflicts:
+    	public/anikama/js2/sales.js
+
+[33mcommit 935d7a05ced5c6ed746b423dfb1d99628e4ae604[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Wed Mar 11 12:24:05 2020 -0500
+
+    facturacion 0.01
+
+[33mcommit b7676a3854961eeff00ea1244035087b9d6101e0[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 11 12:21:51 2020 -0500
+
+    Subir cambios sales.js
+
+[33mcommit 6cb13f0dfbc68f538255c024c0857d7b0526d097[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Tue Mar 10 09:21:05 2020 -0500
+
+    eliminando y anulando pedidoventa
+
+[33mcommit ae38e4babd9274604a2cfb0d8ec0ddb7b781b21d[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Mon Mar 9 18:14:46 2020 -0500
+
+    editando carrito en pedido de venta
+
+[33mcommit 69215bd1f66d6331ac44de73197a7caafee59a59[m
+Merge: dfc446c3 02d13571
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Mon Mar 9 16:21:50 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit dfc446c3dc1d29da53a24c6720c2819581956fe0[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Mon Mar 9 16:10:41 2020 -0500
+
+    Bajar cambios..
+
+[33mcommit 02d135717c169ed948e512e7fe66b2776b689812[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Mon Mar 9 12:25:18 2020 -0500
+
+    correciones terceros 3
+
+[33mcommit 52807ddd7bc7efc93450ee786d8f3d6634f2de46[m
+Merge: 6610d79a 5b39be83
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Mon Mar 9 12:04:48 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 6610d79a0e559e2d76a51a5f2b2e7dd308b336a9[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Mon Mar 9 12:02:40 2020 -0500
+
+    Bajar cambios.
+
+[33mcommit 5b39be838e3ebc053ba0a6b61c50c7f1f042e559[m
+Merge: 1e5a55a0 952c646f
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Mon Mar 9 12:02:38 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+    
+     Conflicts:
+    	app/Http/Controllers/SearchPdtoController.php
+
+[33mcommit 1e5a55a0d4c6c0d85000ed238264df45d2b68171[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Mon Mar 9 12:00:09 2020 -0500
+
+    correciones terceros
+
+[33mcommit 952c646f64fb124096052e109d96c248ca055a05[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Fri Mar 6 18:50:49 2020 -0500
+
+    Subir cambios punto
+
+[33mcommit 0a1f43b90fa3d8110cd8e7df472175bd3e47a934[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Fri Mar 6 16:27:27 2020 -0500
+
+    antes de cambiar names
+
+[33mcommit 8988c1bb8d156950a3dcd2c598c68352922dcb2d[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Fri Mar 6 11:50:12 2020 -0500
+
+    falta editar detalle pedidoventa
+
+[33mcommit b4bc3ebab7223bcf988f1ea6838a1c7cbd76a9dc[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Fri Mar 6 10:39:50 2020 -0500
+
+    subir cambios del controlador punto de venta
+
+[33mcommit b6bfa66254ffb796e2b82fe5d410647becc160d9[m
+Merge: 27335362 f1418813
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Fri Mar 6 10:00:12 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 2733536251fb091f470dd377caddc8295cbadc24[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Fri Mar 6 10:00:00 2020 -0500
+
+    bajar cambios de sales.js
+
+[33mcommit f1418813fab15fe3f5960599eb99cf8ad78e42b7[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Fri Mar 6 09:56:30 2020 -0500
+
+    cosa rara con sales.js
+
+[33mcommit c164b9ed2d63afc7a0d9f785d22df164ee150c32[m
+Merge: d1a0eff5 701009d1
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Thu Mar 5 18:25:45 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 701009d1f04e27f6b3a9aefba6808db1fd454288[m
+Merge: 67d5e0b0 5a619105
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Thu Mar 5 17:56:24 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+    
+     Conflicts:
+    	public/anikama/ani/pointofsale.js
+
+[33mcommit d1a0eff538cfd20c98db23c3885e7c7f792a5933[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Thu Mar 5 17:52:58 2020 -0500
+
+    descargar cambios miguel
+
+[33mcommit 67d5e0b0c78231cc12a95d5311730675336f4055[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Thu Mar 5 17:52:22 2020 -0500
+
+    js ventas
+
+[33mcommit 5a619105440b5489a06a2e54b3771516d10a3d9b[m
+Merge: 2f444d67 cc1a36f7
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Thu Mar 5 17:10:08 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 2f444d67a46450ca820d0e2755a54c8edc73a03b[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Thu Mar 5 17:09:48 2020 -0500
+
+    descargar cambios miguel
+
+[33mcommit cc1a36f734bad9d6d93380d98e3befe0a7342e99[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Thu Mar 5 16:48:38 2020 -0500
+
+    busquedapdto
+
+[33mcommit 2c2a57b81a40f3dcc63c9a1b5184afd5ebfc1fb8[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Wed Mar 4 17:47:40 2020 -0500
+
+    pedido de venta edit y fotter en detalle
+
+[33mcommit e7266b887d71042b5bb53859d84a165933b2094d[m
+Merge: f16f75b1 89580a58
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 4 10:25:54 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit f16f75b19aee59991080c7b90adfcefb918fe354[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Mar 4 10:25:28 2020 -0500
+
+    Cambios
+
+[33mcommit 2490f130561c2b1ea1bfee76d6e92b65f55cb315[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Tue Mar 3 16:02:33 2020 -0500
+
+    pedido de venta, listado y create
+
+[33mcommit 8b08e51e8ee0feb965e501c7c680c172fe7097ad[m
+Merge: d7384660 89580a58
+Author: andre <aloayza@anikamagroup.com>
+Date:   Tue Mar 3 12:31:23 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit d738466045c809afa81e9955880d8d0240b840d6[m
+Author: andre <aloayza@anikamagroup.com>
+Date:   Tue Mar 3 12:30:46 2020 -0500
+
+    commit 25
+
+[33mcommit 89580a5862c28a526e0a688a694d4b76922d61c0[m
+Merge: 518b4710 d13b13b6
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Tue Mar 3 12:29:08 2020 -0500
+
+    facturacion 0.002
+
+[33mcommit 518b471077e9a0bc99877373255c66930c3b4d0a[m
+Author: mdelacruz@anikamagroup.com <mdelacruz@anikamagroup.com>
+Date:   Tue Mar 3 12:13:53 2020 -0500
+
+    facturacion 0.002
+
+[33mcommit d13b13b6206720e1218dd520189ba02d63290ee5[m
+Merge: 21b9597c fb300c94
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Tue Mar 3 12:05:18 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 21b9597c9ed2bdcbbf7124f89d2c54d276d9a604[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Tue Mar 3 12:04:58 2020 -0500
+
+    cambios punto venta transaccion
+
+[33mcommit fb300c94a8d7c36437d1c142fb90f4932a5ded53[m
+Merge: 29c9f10a 40ee3b87
+Author: andre <aloayza@anikamagroup.com>
+Date:   Fri Feb 28 12:42:19 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+    
+     Conflicts:
+    	app/Core/menu.php
+    	routes/web.php
+
+[33mcommit 29c9f10ae7f2a8fc7269e7e4b7406b615d50f4d4[m
+Author: andre <aloayza@anikamagroup.com>
+Date:   Fri Feb 28 12:34:07 2020 -0500
+
+    commit 24
+
+[33mcommit 40ee3b8750f147ebaa4420cd462725a2530c9cf1[m
+Merge: 6cea7d04 4da142ef
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Fri Feb 28 12:33:50 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 6cea7d044f9462909f46d32c8be22e425b4d42c8[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Fri Feb 28 12:33:34 2020 -0500
+
+    prueba
+
+[33mcommit 4da142ef9b247064996675f34924720683db3936[m
+Merge: feee71c7 94862b6c
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Wed Feb 26 17:39:00 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit feee71c72ade5682459dbb5697f764d4c9c99894[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Wed Feb 26 17:38:43 2020 -0500
+
+    pedido venta 20%
+
+[33mcommit 94862b6c8c001ea157b43e7ed4ff1d260176fb4e[m
+Merge: fd99cfb2 d37903a2
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Feb 26 17:38:20 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit fd99cfb2586db442dd83c84c85f48cb97c745d97[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Wed Feb 26 17:36:44 2020 -0500
+
+    punto venta modal
+
+[33mcommit dee4b9a2ace08f23b0b6e9c701088eb825c4f3ae[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Tue Feb 25 10:47:24 2020 -0500
+
+    antes de pedidos de venta
+
+[33mcommit d37903a2961889b34b07ce267924c2869ab6644c[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Tue Feb 25 10:19:26 2020 -0500
+
+    fixeando bug database
+
+[33mcommit 5c4d937816110720946a2bbd2e7ae2da8e4e31f0[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Tue Feb 25 10:08:49 2020 -0500
+
+    devolviendo database xd
+
+[33mcommit 64d03584c34c07227aa532ee749d31fd9ac88b74[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Tue Feb 25 10:03:23 2020 -0500
+
+    test rm cached database para plesk
+
+[33mcommit 27660a1ee4b64f64e78bb162f838ae0175482cc4[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Tue Feb 25 09:21:27 2020 -0500
+
+    limpiando conexiones database
+
+[33mcommit ed151f1565a74f2884fec7638107c4d01907467b[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Tue Feb 25 09:18:57 2020 -0500
+
+    agregando user supervisor a env
+
+[33mcommit 8f6003c23c2cac1441803132f83cd412456083db[m
+Merge: 4bc85dad 01799fc6
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Mon Feb 24 17:00:18 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 4bc85dad27ea714970d1819834d6c0a5c9e879bb[m
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Mon Feb 24 16:59:57 2020 -0500
+
+    conf jobs dependiente de env
+
+[33mcommit 01799fc60554ac4a89b60153695a32bd5485e1fa[m
+Merge: 6d8a6f63 c9a1bdc9
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Fri Feb 21 18:49:54 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
+
+[33mcommit 6d8a6f63e748435e2d6f238ecca43d3d8ca6e676[m
+Author: cardenas <rcardenas@anikamagroup.com>
+Date:   Fri Feb 21 18:49:41 2020 -0500
+
+    fecha y punto de venta generales}
+
+[33mcommit c9a1bdc9dcae294a2dbc5f1241fba9398f589d6e[m
+Merge: 0d974d37 bb4cf509
+Author: dany2 <dacosta@anikamagroup.com>
+Date:   Fri Feb 21 17:31:43 2020 -0500
+
+    Merge branch 'master' of https://bitbucket.org/aloayza26/sprinterweb
