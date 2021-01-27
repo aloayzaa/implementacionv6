@@ -91,7 +91,7 @@ services:
     build:
       context: ./sprinterweb/
       dockerfile: Dockerfile
-    image: christiandavbid/php:7.3-fpm
+    image: christiandavbid/php:7.2.5-fpm
     container_name: sprinterweb-project
     restart: always
     environment:
