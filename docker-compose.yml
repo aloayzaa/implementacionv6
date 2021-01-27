@@ -18,6 +18,8 @@ services:
       - html:/usr/share/nginx/html
     labels:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+    networks:
+      - anikama-network
 ###############################################################################
 # LETSENCRYPT
 ################################################################################
@@ -32,6 +34,8 @@ services:
       - vhostd:/etc/nginx/vhost.d
       - html:/usr/share/nginx/html
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - anikama-network
 ###############################################################################
 # APP HTML -  TEST
 ################################################################################
@@ -50,6 +54,8 @@ services:
     depends_on:
       - nginx-proxy
       - letsencrypt
+    networks:
+      - anikama-network
 
   www2:
     image: nginx
@@ -66,7 +72,9 @@ services:
     depends_on:
       - nginx-proxy
       - letsencrypt
-      ###############################################################################
+    networks:
+      - anikama-network
+###############################################################################
 # LARAVEL APP INICIAL - TEST
 ################################################################################
   laravel-app:
@@ -85,6 +93,8 @@ services:
     depends_on:
       - nginx-proxy
       - letsencrypt
+    networks:
+      - anikama-network
 
   laravel-app-project:
     build:
@@ -103,6 +113,8 @@ services:
       - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     depends_on:
       - mysql06
+    networks:
+      - anikama-network
 ###############################################################################
 # SPRINTER WEB
 ################################################################################
@@ -122,6 +134,8 @@ services:
     depends_on:
       - nginx-proxy
       - letsencrypt
+    networks:
+      - anikama-network
 
   sprinterweb-project:
     build:
@@ -139,6 +153,8 @@ services:
       - /home/devops/implementacionv6/sprinterweb/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     depends_on:
       - mysql06
+    networks:
+      - anikama-network
 ###############################################################################
 # MY SQL SERVICE
 ################################################################################
@@ -157,8 +173,16 @@ services:
     volumes:
       - bdata:/var/lib/mysql/
       - /home/devops/implementacionv6/mysql06/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - anikama-network
 ###############################################################################
-# VULMENES
+# NETWORK
+################################################################################
+networks:
+  anikama-network:
+    driver: bridge
+###############################################################################
+# VOLUMENES
 ################################################################################
 volumes: 
   certs:
