@@ -130,8 +130,8 @@ services:
       - /home/devops/implementacionv6/sprinterweb:/var/www
       - /home/devops/implementacionv6/nginx/sprinterweb/conf.d/:/etc/nginx/conf.d/
     environment:
-      - VIRTUAL_HOST=sprinterweb.com,www.sprinterweb.com
-      - LETSENCRYPT_HOST=sprinterweb.com,www.sprinterweb.com
+      - VIRTUAL_HOST=devops.anikamagroup.com,www.devops.anikamagroup.com
+      - LETSENCRYPT_HOST=devops.anikamagroup.com,www.devops.anikamagroup.com
       - LETSENCRYPT_EMAIL=christiandavbid@gmail.com
     depends_on:
       - nginx-proxy
