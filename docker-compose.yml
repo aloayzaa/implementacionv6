@@ -102,7 +102,7 @@ services:
       - /home/devops/implementacionv6/laravel-app:/var/www
       - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     depends_on:
-      - mysql-06
+      - mysql06
 ###############################################################################
 # SPRINTER WEB
 ################################################################################
@@ -138,13 +138,13 @@ services:
       - /home/devops/implementacionv6/sprinterweb:/var/www
       - /home/devops/implementacionv6/sprinterweb/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     depends_on:
-      - mysql-06
+      - mysql06
 ###############################################################################
 # MY SQL SERVICE
 ################################################################################
-  mysql-06:
+  mysql06:
     image: mysql:5.7.22
-    container_name: mysql-06
+    container_name: mysql06
     restart: always
     tty: true
     ports:
