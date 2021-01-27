@@ -112,7 +112,7 @@ services:
       - /home/devops/implementacionv6/laravel-app:/var/www
       - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     depends_on:
-      - mysql06
+      - mysql
     networks:
       - anikama-network
 ###############################################################################
@@ -152,15 +152,15 @@ services:
       - /home/devops/implementacionv6/sprinterweb:/var/www
       - /home/devops/implementacionv6/sprinterweb/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     depends_on:
-      - mysql06
+      - mysql
     networks:
       - anikama-network
 ###############################################################################
 # MY-SQL SERVICE
 ################################################################################
-  mysql06:
+  mysql:
     image: mysql:5.7.22
-    container_name: mysql06
+    container_name: mysql
     restart: always
     tty: true
     ports:
@@ -173,10 +173,10 @@ services:
       - TZ=America/Lima
     volumes:
       - bdata:/var/lib/mysql/
-      - /home/devops/implementacionv6/mysql06/my.cnf:/etc/mysql/my.cnf
-      - /home/devops/implementacionv6/mysql06/init:/docker-entrypoint-initdb.d
-      - /home/devops/implementacionv6/mysql06/logs:/var/log/mysql
-      - /home/devops/implementacionv6/mysql06/data:/var/lib/mysql
+      - /home/devops/implementacionv6/mysql/my.cnf:/etc/mysql/my.cnf
+      - /home/devops/implementacionv6/mysql/init:/docker-entrypoint-initdb.d
+      - /home/devops/implementacionv6/mysql/logs:/var/log/mysql
+      - /home/devops/implementacionv6/mysql/data:/var/lib/mysql
     networks:
       - anikama-network
 ###############################################################################
