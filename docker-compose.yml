@@ -66,8 +66,7 @@ services:
     depends_on:
       - nginx-proxy
       - letsencrypt
-      
-###############################################################################
+      ###############################################################################
 # LARAVEL APP INICIAL - TEST
 ################################################################################
   laravel-app:
@@ -102,7 +101,8 @@ services:
     volumes:
       - /home/devops/implementacionv6/laravel-app:/var/www
       - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
-
+    depends_on:
+      - mysql-06
 ###############################################################################
 # SPRINTER WEB
 ################################################################################
@@ -137,13 +137,14 @@ services:
     volumes:
       - /home/devops/implementacionv6/sprinterweb:/var/www
       - /home/devops/implementacionv6/sprinterweb/php/local.ini:/usr/local/etc/php/conf.d/local.ini
-
+    depends_on:
+      - mysql-06
 ###############################################################################
 # MY SQL SERVICE
 ################################################################################
-  laravel-app-mysql:
+  mysql-06:
     image: mysql:5.7.22
-    container_name: laravel-app-mysql
+    container_name: mysql-06
     restart: always
     tty: true
     ports:
@@ -155,8 +156,10 @@ services:
       SERVICE_NAME: mysql
     volumes:
       - bdata:/var/lib/mysql/
-      - /home/devops/implementacionv6/laravel-app/mysql/my.cnf:/etc/mysql/my.cnf
-
+      - /home/devops/implementacionv6/mysql06/my.cnf:/etc/mysql/my.cnf
+###############################################################################
+# VULMENES
+################################################################################
 volumes: 
   certs:
   html:
