@@ -19,3 +19,17 @@
 - docker-compose exec laravel-app-project php artisan migrate
 - docker-compose exec laravel-app-project php artisan tinker
 - \DB::table('migrations')->get();
+
+
+## Para el problema de bloqueo por url para los recursos http y no https
+
+- En el AppServiceProvider.php
+
+use Illuminate\Support\Facades\URL;
+
+public function register()
+    {
+        if(env('APP_ENV') !== 'local'){
+            URL::forceScheme('https');
+        }
+    }
