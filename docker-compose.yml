@@ -156,7 +156,7 @@ services:
     networks:
       - anikama-network
 ###############################################################################
-# MY SQL SERVICE
+# MY-SQL SERVICE
 ################################################################################
   mysql06:
     image: mysql:5.7.22
@@ -166,13 +166,17 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_ROOT_PASSWORD: sasa
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
+      - MYSQL_DATABASE=laravel
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=qcQ53aaF+S1x
+      - MYSQL_ROOT_PASSWORD=W0won5$5
+      - TZ=America/Lima
     volumes:
       - bdata:/var/lib/mysql/
       - /home/devops/implementacionv6/mysql06/my.cnf:/etc/mysql/my.cnf
+      - /home/devops/implementacionv6/mysql06/init:/docker-entrypoint-initdb.d
+      - /home/devops/implementacionv6/mysql06/logs:/var/log/mysql
+      - /home/devops/implementacionv6/mysql06/data:/var/lib/mysql
     networks:
       - anikama-network
 ###############################################################################
