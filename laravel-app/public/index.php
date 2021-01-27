@@ -1,5 +1,3 @@
-HOLA LARAVEL-APP
-
 <?php
 
 use Illuminate\Contracts\Http\Kernel;
