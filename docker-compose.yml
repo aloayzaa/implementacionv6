@@ -66,6 +66,42 @@ services:
     depends_on:
       - nginx-proxy
       - letsencrypt
+
+###############################################################################
+# SPRINTER WEB
+################################################################################
+  sprinterweb:
+    image: nginx
+    restart: always
+    container_name: sprinterweb
+    expose:
+      - "80"
+    volumes:
+      - /home/devops/implementacionv6/sprinterweb:/var/www
+      - /home/devops/implementacionv6/nginx/sprinterweb/conf.d/:/etc/nginx/conf.d/
+    environment:
+      - VIRTUAL_HOST=sprinterweb.com,www.sprinterweb.com
+      - LETSENCRYPT_HOST=sprinterweb.com,www.sprinterweb.com
+      - LETSENCRYPT_EMAIL=christiandavbid@gmail.com
+    depends_on:
+      - nginx-proxy
+      - letsencrypt
+
+  sprinterweb-project:
+    build:
+      context: ./sprinterweb/
+      dockerfile: Dockerfile
+    image: christiandavbid/php:7.3-fpm
+    container_name: sprinterweb-project
+    restart: always
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - /home/devops/implementacionv6/sprinterweb:/var/www
+      - /home/devops/implementacionv6/sprinterweb/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+   
 ###############################################################################
 # LARAVEL APP INICIAL - TEST
 ################################################################################
@@ -102,41 +138,6 @@ services:
       - /home/devops/implementacionv6/laravel-app:/var/www
       - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
 
-###############################################################################
-# SPRINTER WEB
-################################################################################
-  sprinterweb:
-    image: nginx
-    restart: always
-    container_name: sprinterweb
-    expose:
-      - "80"
-    volumes:
-      - /home/devops/implementacionv6/sprinterweb:/var/www
-      - /home/devops/implementacionv6/nginx/sprinterweb/conf.d/:/etc/nginx/conf.d/
-    environment:
-      - VIRTUAL_HOST=sprintererp.com,www.sprintererp.com
-      - LETSENCRYPT_HOST=sprintererp.com,www.sprintererp.com
-      - LETSENCRYPT_EMAIL=christiandavbid@gmail.com
-    depends_on:
-      - nginx-proxy
-      - letsencrypt
-
-  sprinterweb-project:
-    build:
-      context: ./sprinterweb/
-      dockerfile: Dockerfile
-    image: christiandavbid/php:7.3-fpm
-    container_name: sprinterweb-project
-    restart: always
-    environment:
-      SERVICE_NAME: app
-      SERVICE_TAGS: dev
-    working_dir: /var/www
-    volumes:
-      - /home/devops/implementacionv6/sprinterweb:/var/www
-      - /home/devops/implementacionv6/sprinterweb/php/local.ini:/usr/local/etc/php/conf.d/local.ini
-   
 ###############################################################################
 # MY SQL SERVICE
 ################################################################################
