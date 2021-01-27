@@ -19,6 +19,4 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-    RewriteCond %{SERVER_PORT} ^443$
-    RewriteRule (.*) http://www.devops.anikamagroup.com/$1 
 </IfModule>
