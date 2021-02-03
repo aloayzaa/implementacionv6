@@ -31,7 +31,7 @@ class CreateUserAdmin implements ShouldQueue
     {
         $this->user = $user;
         $this->ruc = $ruc;
-        $this->host = env('APP_ENV') == 'local' ? '192.168.0.17' : 'localhost';
+        $this->host = env('APP_ENV') == 'local' ? '192.168.0.17' : 'mysql';
     }
 
     /**
