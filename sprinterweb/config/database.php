@@ -78,7 +78,7 @@ return [
 
         'panel' => [
             'driver'    => 'mysql',
-            'host' => 'mysql',
+            'host' => 'localhost',
             //'host' => '192.168.0.17',
             'database'  => 'panel_sprinter',
             'username'  => 'root',
