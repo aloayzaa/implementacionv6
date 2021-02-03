@@ -35,45 +35,16 @@ return [
 
         'DB_CONNECTION_SERVICIOS' => [
             'driver' => 'mysql',
-            'host' => 'localhost',
+            'host' => 'mysql',
             // 'host' => '192.168.0.17',
             'database' => 'servicios',//localhost
             'username' => 'root',
-            'password' => '',
+            'password' => 'W0won5$5',
             'port' => '3306',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'strict' => false,
-        ],
-
-        'DB_CONNECTION_10707628338' => [
-            'driver'    => 'mysql',
-            'host'  => 'localhost',
-            // 'host' => '192.168.0.17',
-            'database'  => 'nuevosprinter_10707628338',
-            'username'  => 'root',
-            'password'  => '',
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'port'      => '3306',
-            'strict'    => false,
-        ],
-
-
-        'DB_CONNECTION_20109072177' => [
-            'driver'    => 'mysql',
-            'host'  => 'localhost',
-            // 'host' => '192.168.0.17',
-            'database'  => 'nuevosprinter_20109072177',
-            'username'  => 'root',
-            'password'  => '',
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'port'      => '3306',
-            'strict'    => false,
         ],
 
         'panel' => [
