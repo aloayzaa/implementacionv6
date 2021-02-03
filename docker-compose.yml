@@ -39,84 +39,84 @@ services:
 ###############################################################################
 # APP HTML -  TEST
 ################################################################################
-  www:
-    image: nginx
-    restart: always
-    container_name: www
-    expose:
-      - "80"
-    volumes:
-      - /home/devops/implementacionv6/www:/usr/share/nginx/html:ro
-    environment:
-      - VIRTUAL_HOST=anikamero.com,www.anikamero.com
-      - LETSENCRYPT_HOST=anikamero.com,www.anikamero.com
-      - LETSENCRYPT_EMAIL=cvasquez@anikamero.com
-    depends_on:
-      - nginx-proxy
-      - letsencrypt
-    networks:
-      - anikama-network
-
-  www2:
-    image: nginx
-    restart: always
-    container_name: www2
-    expose:
-      - "80"
-    volumes:
-      - /home/devops/implementacionv6/www2:/usr/share/nginx/html:ro
-    environment:
-      - VIRTUAL_HOST=sarasa.com,www.sarasa.com
-      - LETSENCRYPT_HOST=sarasa.com,www.sarasa.com
-      - LETSENCRYPT_EMAIL=cvasquez@sarasa.com
-    depends_on:
-      - nginx-proxy
-      - letsencrypt
-    networks:
-      - anikama-network
+#  www:
+#    image: nginx
+#    restart: always
+#    container_name: www
+#    expose:
+#      - "80"
+#    volumes:
+#      - /home/devops/implementacionv6/www:/usr/share/nginx/html:ro
+#    environment:
+#      - VIRTUAL_HOST=anikamero.com,www.anikamero.com
+#      - LETSENCRYPT_HOST=anikamero.com,www.anikamero.com
+#      - LETSENCRYPT_EMAIL=cvasquez@anikamero.com
+#    depends_on:
+#      - nginx-proxy
+#      - letsencrypt
+#    networks:
+#      - anikama-network
+#
+#  www2:
+#    image: nginx
+#    restart: always
+#    container_name: www2
+#    expose:
+#      - "80"
+#    volumes:
+#      - /home/devops/implementacionv6/www2:/usr/share/nginx/html:ro
+#    environment:
+#      - VIRTUAL_HOST=sarasa.com,www.sarasa.com
+#      - LETSENCRYPT_HOST=sarasa.com,www.sarasa.com
+#      - LETSENCRYPT_EMAIL=cvasquez@sarasa.com
+#    depends_on:
+#      - nginx-proxy
+#      - letsencrypt
+#    networks:
+#      - anikama-network
 ###############################################################################
 # LARAVEL APP INICIAL - TEST
 ################################################################################
-  laravel-app:
-    image: nginx
-    restart: always
-    container_name: laravel-app
-    expose:
-      - "80"
-    volumes:
-      - /home/devops/implementacionv6/laravel-app:/var/www
-      - /home/devops/implementacionv6/nginx/laravel-app/conf.d/:/etc/nginx/conf.d/
-    environment:
-      - VIRTUAL_HOST=laravel-app.com,www.laravel-app.com
-      - LETSENCRYPT_HOST=laravel-app.com,www.laravel-app.com
-      - LETSENCRYPT_EMAIL=cvasquez@laravel-app.com
-    depends_on:
-      - nginx-proxy
-      - letsencrypt
-    networks:
-      - anikama-network
-
-  laravel-app-project:
-    build:
-      context: ./laravel-app/
-      dockerfile: Dockerfile
-    image: christiandavbid/php:7.3-fpm
-    container_name: laravel-app-project
-    restart: always
-    tty: true
-    environment:
-      SERVICE_NAME: app
-      SERVICE_TAGS: dev
-    working_dir: /var/www
-    volumes:
-      - /home/devops/implementacionv6/laravel-app:/var/www
-      - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
-    links:
-      - mysql
-    depends_on:
-      - mysql
-    networks:
-      - anikama-network
+#  laravel-app:
+#    image: nginx
+#    restart: always
+#    container_name: laravel-app
+#    expose:
+#      - "80"
+#    volumes:
+#      - /home/devops/implementacionv6/laravel-app:/var/www
+#      - /home/devops/implementacionv6/nginx/laravel-app/conf.d/:/etc/nginx/conf.d/
+#    environment:
+#      - VIRTUAL_HOST=laravel-app.com,www.laravel-app.com
+#      - LETSENCRYPT_HOST=laravel-app.com,www.laravel-app.com
+#      - LETSENCRYPT_EMAIL=cvasquez@laravel-app.com
+#    depends_on:
+#      - nginx-proxy
+#      - letsencrypt
+#    networks:
+#      - anikama-network
+#
+#  laravel-app-project:
+#    build:
+#      context: ./laravel-app/
+#      dockerfile: Dockerfile
+#    image: christiandavbid/php:7.3-fpm
+#    container_name: laravel-app-project
+#    restart: always
+#    tty: true
+#    environment:
+#      SERVICE_NAME: app
+#      SERVICE_TAGS: dev
+#    working_dir: /var/www
+#    volumes:
+#      - /home/devops/implementacionv6/laravel-app:/var/www
+#      - /home/devops/implementacionv6/laravel-app/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+#    links:
+#      - mysql
+#    depends_on:
+#      - mysql
+#    networks:
+#      - anikama-network
 ###############################################################################
 # SPRINTER WEB
 ################################################################################

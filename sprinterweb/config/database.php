@@ -78,11 +78,11 @@ return [
 
         'panel' => [
             'driver'    => 'mysql',
-            'host' => 'localhost',
+            'host' => 'mysql',
             //'host' => '192.168.0.17',
             'database'  => 'panel_sprinter',
             'username'  => 'root',
-            'password'  => '',
+            'password'  => 'W0won5$5',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

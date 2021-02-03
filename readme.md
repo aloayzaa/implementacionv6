@@ -1,7 +1,5 @@
 # DOCKER : LARAVEL + MYSQL + NGINX PROXY + LETSENCRYPT
 
-
-
 ## Configuracion ROOT Mysql
 
 - use mysql;
@@ -33,3 +31,8 @@ public function register()
             URL::forceScheme('https');
         }
     }
+
+- nginx -s reload
+- location /\.ht { deny all; } // recomendable usarlo
+- nginx -t //lo que hace es verificar q nuestros archivos tengan bien la sintaxis
+- systemctl reload nginx
