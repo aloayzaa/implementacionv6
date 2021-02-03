@@ -19,7 +19,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
+            'host' => env('DB_HOST', 'mysql'),
             // 'host' => env('DB_HOST', '192.168.0.17'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
@@ -78,7 +78,7 @@ return [
 
         'panel' => [
             'driver'    => 'mysql',
-            'host' => 'localhost',
+            'host' => 'mysql',
             //'host' => '192.168.0.17',
             'database'  => 'panel_sprinter',
             'username'  => 'root',
