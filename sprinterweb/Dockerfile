@@ -55,7 +55,8 @@ RUN docker-php-ext-install gd
 # Supervisor
 #RUN add-apt-repository universe
 RUN apt-get update -y
-RUN apt-get install supervisor -y && touch /etc/supervisor/conf.d/laravel-worker.conf
+RUN apt-get install supervisor -y 
+#&& touch /etc/supervisor/conf.d/laravel-worker.conf
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
