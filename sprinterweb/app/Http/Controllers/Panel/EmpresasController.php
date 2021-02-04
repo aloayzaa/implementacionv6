@@ -123,7 +123,7 @@ class EmpresasController extends Controller
             if ($num_linea == 63) {
                 fwrite($file, "        'DB_CONNECTION_" . $request->txt_ruc . "' => [
             'driver'    => 'mysql',
-            'host'      => 'localhost',
+            'host'      => 'mysql',
             'database'  => '" . $this->conf_bd . $request->txt_ruc . "',
             'username'  => '" . $this->user . "',
             'password'  => '" . $this->pass . "',

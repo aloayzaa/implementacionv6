@@ -31,7 +31,7 @@ class CreateDatabase implements ShouldQueue
     public function __construct($ruc)
     {
         $this->ruc = $ruc;
-        $this->host = env('APP_ENV') == 'local' ? '192.168.0.17' : '172.26.0.2';
+        $this->host = env('APP_ENV') == 'local' ? '192.168.0.17' : 'mysql';
     }
 
     /**
