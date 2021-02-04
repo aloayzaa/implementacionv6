@@ -57,10 +57,10 @@ RUN docker-php-ext-install gd
 RUN apt-get update -y
 RUN apt-get install supervisor -y 
 COPY ./supervisor/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
-
+RUN chown root:root /etc/supervisor/conf.d/laravel-worker.conf
 RUN service supervisor start
 #RUN supervisorctl reread
-#RUN supervisorctl update
+RUN supervisorctl update
 RUN supervisorctl start laravel-worker:*
 
 # Install composer
@@ -75,7 +75,7 @@ COPY . /var/www
 
 # Copy existing application directory permissions
 COPY --chown=devops:devops . /var/www
-RUN chown -R root:root /etc/supervisor/conf.d/
+
 
 # Change current user to devops
 USER devops
