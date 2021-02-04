@@ -76,4 +76,5 @@ USER devops
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
+#CMD ["supervisord","-c","/etc/supervisor/conf.d/laravel-worker.conf"]
 CMD ["php-fpm"]
