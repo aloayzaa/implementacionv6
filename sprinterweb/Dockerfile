@@ -56,7 +56,10 @@ RUN docker-php-ext-install gd
 #RUN add-apt-repository universe
 RUN apt-get update -y
 RUN apt-get install supervisor -y 
-#&& touch /etc/supervisor/conf.d/laravel-worker.conf
+COPY ./supervisor/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
+RUN supervisorctl reread
+RUN supervisorctl update
+RUN supervisorctl start /etc/supervisor/conf.d/laravel-worker.conf
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -76,5 +79,4 @@ USER devops
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
-#CMD ["supervisord","-c","/etc/supervisor/conf.d/laravel-worker.conf"]
 CMD ["php-fpm"]
