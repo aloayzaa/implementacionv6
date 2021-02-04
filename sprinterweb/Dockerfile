@@ -60,7 +60,7 @@ COPY ./supervisor/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
 RUN chown root:root /etc/supervisor/conf.d/laravel-worker.conf
 RUN service supervisor start
 #RUN supervisorctl reread
-RUN supervisorctl update
+#RUN supervisorctl update
 RUN supervisorctl start laravel-worker:*
 
 # Install composer
