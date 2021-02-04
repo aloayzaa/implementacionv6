@@ -57,6 +57,7 @@ RUN docker-php-ext-install gd
 RUN apt-get update -y
 RUN apt-get install supervisor -y 
 COPY ./supervisor/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
+RUN service supervisor start
 RUN supervisorctl reread
 RUN supervisorctl update
 RUN supervisorctl start /etc/supervisor/conf.d/laravel-worker.conf
