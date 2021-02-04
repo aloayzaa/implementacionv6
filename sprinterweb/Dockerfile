@@ -60,7 +60,7 @@ COPY ./supervisor/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
 RUN service supervisor start
 #RUN supervisorctl reread
 #RUN supervisorctl update
-RUN supervisorctl start all
+RUN supervisorctl start laravel-worker:*
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
